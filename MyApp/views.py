@@ -11,17 +11,19 @@ from django.http import HttpResponse
 
 
 def index(request):
+    if request.method=="POST":
+        mobile_no=request.POST.get('txt_mobile_no')
     return render(request,"index.html")
 
 
 
 def initiate_call(request):
-    account_sid = 'ACe6e619c1e110ad4c8dea546308379250'
-    auth_token = 'b7b9b1a18689de4715bd731597bcf86f'
+    account_sid = 'AC8ea66fda4dbf8ff1db096f6987450e14'
+    auth_token = '9ff9c9e4a996385c20b9f4886a20c495'
     client = Client(account_sid, auth_token)
 
     to_phone_number = '+917776824564'
-    from_phone_number = '+13612734227'
+    from_phone_number = '+1 361 273 4227'
 
     response = VoiceResponse()
     gather = Gather(input='speech', timeout=3, action='/process_speech', method='POST')
