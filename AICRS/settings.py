@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'MyApp',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -117,7 +119,18 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
+
+STATIC_ROOT = "/AICRS/static/"
+
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TWILIO_ACCOUNT_SID = 'AC9f5300a10b55a5a2613b1cbb0ecb41f8'
+TWILIO_AUTH_TOKEN = 'b1e17f35b3c7348895ffa8b4b29749b2'
+TWILIO_PHONE_NUMBER = '+12542764260'
