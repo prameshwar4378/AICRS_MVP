@@ -42,9 +42,8 @@ def initiate_call(request):
 
 
 def process_speech(request):
-    name = request.POST['name']
-    age = request.POST['age']
-    print("Name is:", name)
-    print("Age is:", age)
- 
-    return HttpResponse("#########")
+    claim_numbers = request.POST['claim_numbers"']
+    claim_resulation = request.POST['claim_resulation']
+    print("Claim Numbers:", claim_numbers)
+    print("Claim resulation:", claim_resulation)
+    return HttpResponse()
